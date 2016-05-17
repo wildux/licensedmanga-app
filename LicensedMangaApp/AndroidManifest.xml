@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.licensedmanga.licensedmangaapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="23" />
+
+    <!-- Internet Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Network State Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SeriesMenuActivity"
+            android:label="@string/title_activity_series_menu"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.licensedmanga.licensedmangaapp.MainActivity" />
+        </activity>
+        <activity
+            android:name=".CalendarActivity"
+            android:label="@string/title_activity_calendar"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.licensedmanga.licensedmangaapp.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SerieInfoActivity"
+            android:label="@string/title_activity_serie_info" >
+        </activity>
+        <activity
+            android:name=".AnnouncementsActivity"
+            android:label="@string/title_activity_announcements"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.licensedmanga.licensedmangaapp.MainActivity" />
+        </activity>
+        <activity
+            android:name=".CollectionMenuActivity"
+            android:label="@string/title_activity_collection_menu"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.licensedmanga.licensedmangaapp.MainActivity" />
+        </activity>
+        <activity
+            android:name=".CollectionActivity"
+            android:label="@string/title_activity_collection"
+            android:parentActivityName=".CollectionMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.licensedmanga.licensedmangaapp.CollectionMenuActivity" />
+        </activity>
+        <activity
+            android:name=".ToReadActivity"
+            android:label="@string/title_activity_to_read"
+            android:parentActivityName=".CollectionMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.licensedmanga.licensedmangaapp.CollectionMenuActivity" />
+        </activity>
+        <activity
+            android:name=".SeriesListActivity"
+            android:label="@string/title_activity_series_list"
+            android:parentActivityName=".SeriesMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.licensedmanga.licensedmangaapp.SeriesMenuActivity" />
+        </activity>
+        <activity
+            android:name=".WatchlistActivity"
+            android:label="@string/title_activity_watchlist"
+            android:parentActivityName=".CollectionMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.licensedmanga.licensedmangaapp.CollectionMenuActivity" />
+        </activity>
+        <activity
+            android:name=".ProvaActivity"
+            android:label="@string/title_activity_prova" >
+        </activity>
+        <activity
+            android:name=".ParseJSON"
+            android:label="@string/title_activity_parse_json" >
+        </activity>
+    </application>
+
+</manifest>
